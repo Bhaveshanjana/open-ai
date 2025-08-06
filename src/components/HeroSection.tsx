@@ -1,3 +1,4 @@
+import { quick, sans } from "@/utils/fonts";
 import Image from "next/image";
 import React from "react";
 
@@ -11,21 +12,24 @@ const HeroSection = () => {
           alt="bgimage"
           height="200"
           width="200"
-          className="w-full h-[70vh] object-cover"
+          className="w-full h-[50vh] md:h-[70vh] object-cover"
         />
       </div>
       {/* Hero Text */}
-      <div className="z-10 bottom-28 md:bottom-0 flex flex-col text-center justify-center absolute inset-0 md:w-4xl mx-auto">
-        <h1 className="text-4xl md:text-8xl font-semibold">
+      <div className="z-10 bottom-5 md:bottom-0 flex flex-col text-center justify-center absolute inset-0 md:w-4xl mx-auto">
+        <h1
+          className={`text-4xl md:text-8xl font-medium tracking-tight ${sans}`}
+        >
           Find your perfect Open-Source Repo
         </h1>
-        <h2 className="text-xs md:text-xl w-xs md:w-xl mx-auto">
+        <h2 className={`text-xs md:text-xl w-xs md:w-2xl mx-auto ${quick}`}>
           Find top open-source repos in seconds. Filter by your language,
           framework, or niche. Start contributing in seconds, not hours.
         </h2>
-        <div>
-          <button className="mt-7 bg-blue-700 px-5 p-2 rounded-lg">
-            Get Start
+        {/* Get start Button */}
+        <div className=" w-max mx-auto z-10 cursor-pointer bg-gradient-to-b from-[#5335FF] to-[#3C00FF] p-1 rounded-xl shadow-sm shadow-[#4d54a1] mt-7 group">
+          <button className="flex gap-2 items-center justify-center hover:inset-shadow-sm hover:inset-shadow-blue-400 hover:border-blue-500 px-6 py-2 rounded-[10px] transition-all duration-200 text-white cursor-pointer">
+            <span className="">Get Start</span>
           </button>
         </div>
       </div>

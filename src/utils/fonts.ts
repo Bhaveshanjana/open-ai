@@ -4,6 +4,7 @@ import {
   Manrope,
   Michroma,
   Quicksand,
+  Roboto_Flex,
   VT323,
 } from "next/font/google";
 
@@ -36,7 +37,11 @@ const edu_init = VT323({
 const quick_init = Quicksand({
   subsets: ["latin"],
   display: "swap",
-  weight: "400"
+  weight: "400",
+});
+const roboto_init = Roboto_Flex({
+  subsets: ["latin"],
+  display: "swap",
 });
 
 export const bricolage_grotesque = bricolage_grotesque_init.className;
@@ -45,3 +50,4 @@ export const michorma = michroma_init.className;
 export const sans = dm_sans_init.className;
 export const edu = edu_init.className;
 export const quick = quick_init.className;
+export const roboto = roboto_init.className;

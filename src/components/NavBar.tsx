@@ -28,7 +28,7 @@ const NavBar = () => {
   ];
   return (
     <div className="flex justify-center">
-      <nav className="w-5xl mx-auto bg-[#a39c9ca4] backdrop-blur-xs  gap-7 rounded-2xl mt-7 z-50  fixed ">
+      <nav className="w-5xl mx-auto  backdrop-blur-md border border-[#ffffff3a] gap-7 rounded-2xl mt-7 z-50  fixed ">
         <div className="flex justify-between p-4 px-2 items-center mx-3">
           {/* Nav logo */}
           <div className="flex items-center gap-2">

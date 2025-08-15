@@ -4,6 +4,7 @@ import React from "react";
 import Journey from "./Journey";
 import HowitWorks from "./HowitWorks";
 import Preview from "./Preview";
+import Statistics from "./Statistics";
 
 const HeroSection = () => {
   return (
@@ -46,6 +47,8 @@ const HeroSection = () => {
       <Preview />
       {/* How it works section */}
       <HowitWorks />
+      {/* Statistics section */}
+      <Statistics />
     </>
   );
 };

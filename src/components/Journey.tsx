@@ -2,7 +2,7 @@
 
 import React from "react";
 import { FlickeringGrid } from "./ui/bg";
-import { edu, michorma, roboto, sans } from "@/utils/fonts";
+import { roboto, sans } from "@/utils/fonts";
 import RoataingWheel from "./ui/RoataingWheel";
 import AnimatedCards from "./ui/Cards";
 import { motion } from "framer-motion";

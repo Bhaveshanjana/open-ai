@@ -2,6 +2,8 @@ import { quick, sans } from "@/utils/fonts";
 import Image from "next/image";
 import React from "react";
 import Journey from "./Journey";
+import HowitWorks from "./HowitWorks";
+import Preview from "./Preview";
 
 const HeroSection = () => {
   return (
@@ -40,6 +42,10 @@ const HeroSection = () => {
       </div>
       {/* Journey section */}
       <Journey />
+      {/* Preivew section */}
+      <Preview />
+      {/* How it works section */}
+      <HowitWorks />
     </>
   );
 };

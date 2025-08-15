@@ -26,6 +26,7 @@ const Journey = () => {
           height={180}
           width={1540}
         />
+        <div className="h-full  w-5xl bg-black blur-2xl rounded-full absolute flex  justify-center items-center inset-0 mx-auto"></div>
         <div className="flex justify-center text-center items-center inset-0 absolute text-2xl md:text-5xl">
           <span className={`${roboto} `}>
             Supercharge Your Open Source Journey
@@ -33,11 +34,11 @@ const Journey = () => {
         </div>
       </div>
       {/* 3 box's */}
-      <div className="border-b-[1px] border-t-[1px] border-gray-900 mb-6 ">
-        <div className="relative flex w-full mx-auto px-4 h-full">
+      <div className="border-b-[1px] border-t-[1px] border-[#202020] mb-6 ">
+        <div className="relative flex w-full mx-auto px-1 h-full">
           {/* 1st box */}
-          <div className="w-full border-r-[1px] border-gray-900 p-2">
-            <div className="relative border border-dashed border-gray-900 h-full p-7">
+          <div className="w-full border-r-[1px] border-[#202020] p-2">
+            <div className="relative border border-dashed border-[#202020] h-full p-7">
               {/* Grid effect */}
               <FlickeringGrid
                 color="#8bcb31"
@@ -83,8 +84,8 @@ const Journey = () => {
             </div>
           </div>
           {/* 2nd box */}
-          <div className="relative  w-full border-r-[1px] border-gray-900 p-2 overflow-hidden ">
-            <div className="border border-dashed border-gray-900 ">
+          <div className="relative  w-full border-r-[1px] border-[#202020] p-2 overflow-hidden ">
+            <div className="border border-dashed border-[#202020] ">
               <div className="absolute inset-2">
                 <FlickeringGrid
                   color="#8bcb31"
@@ -105,7 +106,7 @@ const Journey = () => {
           </div>
           {/* 3rd box */}
           <div className="relative w-full p-2 ">
-            <div className="border border-dashed border-gray-900 h-full">
+            <div className="border border-dashed border-[#202020] h-full">
               <div className="absolute inset-2">
                 <FlickeringGrid
                   color="#8bcb31"

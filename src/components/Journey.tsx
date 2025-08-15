@@ -37,7 +37,7 @@ const Journey = () => {
         <div className="relative flex w-full mx-auto px-4 h-full">
           {/* 1st box */}
           <div className="w-full border-r-[1px] border-gray-900 p-2">
-            <div className="relative border border-dashed border-gray-900 h-full p-9">
+            <div className="relative border border-dashed border-gray-900 h-full p-7">
               {/* Grid effect */}
               <FlickeringGrid
                 color="#8bcb31"
@@ -49,33 +49,37 @@ const Journey = () => {
 
               {/* Text */}
               <div className={`${sans}`}>
-                <p className="text-2xl ">Personalized Recommendations</p>
+                <p className="text-3xl tracking-[-0.07em]">
+                  Personalized Recommendations
+                </p>
                 <p className="text-gray-400">
                   Get personalized repos you can contribute to.
                 </p>
               </div>
 
               {/* Animated cards */}
-              {boxes.map((box, index) => (
-                <motion.div
-                  key={index}
-                  className="flex justify-start items-center bg-gradient-to-t from-[#212121f1] to-[#2e2c2c24] rounded-2xl p-5 mt-4 backdrop-blur-md border border-[#3d3a3a5c]"
-                  initial={{ y: -50, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{
-                    duration: 0.5,
-                    delay: index * 0.3, // each one appears after the previous
-                    ease: "easeOut",
-                  }}
-                >
-                  <div>
-                    <p className="font-medium">{box.title}</p>
-                    <span className="text-sm text-gray-400">
-                      {box.subtitle}
-                    </span>
-                  </div>
-                </motion.div>
-              ))}
+              <div className="mt-6 p-2">
+                {boxes.map((box, index) => (
+                  <motion.div
+                    key={index}
+                    className="flex justify-start items-center bg-gradient-to-t from-[#212121f1] to-[#2e2c2c24] rounded-2xl p-4 mt-4 backdrop-blur-md border border-[#3d3a3a5c]"
+                    initial={{ y: -50, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{
+                      duration: 0.5,
+                      delay: index * 0.3, // each one appears after the previous
+                      ease: "easeOut",
+                    }}
+                  >
+                    <div>
+                      <p className="font-medium">{box.title}</p>
+                      <span className="text-sm text-gray-400">
+                        {box.subtitle}
+                      </span>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </div>
           {/* 2nd box */}

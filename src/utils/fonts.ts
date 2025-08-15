@@ -18,12 +18,6 @@ const manrope_init = Manrope({
   display: "swap",
 });
 
-const michroma_init = Michroma({
-  weight: "400",
-  subsets: ["latin"],
-  display: "swap",
-});
-
 const dm_sans_init = DM_Sans({
   subsets: ["latin"],
   display: "swap",
@@ -44,9 +38,8 @@ const roboto_init = Roboto_Flex({
   display: "swap",
 });
 
-export const bricolage_grotesque = bricolage_grotesque_init.className;
+export const bricolage = bricolage_grotesque_init.className;
 export const manrope = manrope_init.className;
-export const michorma = michroma_init.className;
 export const sans = dm_sans_init.className;
 export const edu = edu_init.className;
 export const quick = quick_init.className;

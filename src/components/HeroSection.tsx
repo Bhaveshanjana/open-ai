@@ -5,6 +5,9 @@ import Journey from "./Journey";
 import HowitWorks from "./HowitWorks";
 import Preview from "./Preview";
 import Statistics from "./Statistics";
+import Testimonials from "./Testimonial";
+import Start from "./Cta";
+import Footer from "./Footer";
 
 const HeroSection = () => {
   return (
@@ -34,6 +37,21 @@ const HeroSection = () => {
           {/* Get start Button */}
           <div className=" w-max mx-auto z-10 cursor-pointer bg-gradient-to-b from-[#5335FF] to-[#3C00FF] p-1 rounded-xl shadow-sm shadow-[#4d54a1] mt-7 group">
             <button className="flex gap-2 items-center justify-center hover:inset-shadow-sm hover:inset-shadow-blue-400 hover:border-blue-500 px-6 py-2 rounded-[10px] transition-all duration-200 text-white cursor-pointer">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                height="23"
+                width="24"
+                strokeLinejoin="round"
+                strokeLinecap="round"
+                fill="none"
+                strokeWidth="2"
+                stroke="currentColor"
+                className="lucide lucide-terminal"
+              >
+                <polyline points="4 17 10 11 4 5"></polyline>
+                <line y2="19" y1="19" x2="20" x1="12"></line>
+              </svg>
               <span className="">Get Start</span>
             </button>
           </div>
@@ -49,6 +67,12 @@ const HeroSection = () => {
       <HowitWorks />
       {/* Statistics section */}
       <Statistics />
+      {/* Testimonial section */}
+      <Testimonials />
+      {/* Get Start section */}
+      <Start />
+      {/* Footer */}
+      <Footer />
     </>
   );
 };

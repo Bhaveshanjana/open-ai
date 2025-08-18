@@ -45,3 +45,20 @@ body {
 .animate-box-spin {
   animation: spin-slow 4s linear infinite; /* inner box spins faster */
 }
+@keyframes scrollUp {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+@keyframes scrollDown {
+  0% { transform: translateY(-50%); }
+  100% { transform: translateY(0); }
+}
+
+.animate-scroll-up {
+  animation: scrollUp 20s linear infinite;
+}
+
+.animate-scroll-down {
+  animation: scrollDown 20s linear infinite;
+}

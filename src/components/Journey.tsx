@@ -26,18 +26,18 @@ const Journey = () => {
           height={180}
           width={1540}
         />
-        <div className="h-full  w-5xl bg-black blur-2xl rounded-full absolute flex  justify-center items-center inset-0 mx-auto"></div>
-        <div className="flex justify-center text-center items-center inset-0 absolute text-2xl md:text-5xl">
-          <span className={`${roboto} `}>
+        <div className="md:h-full h-44 w-52 md:w-5xl bg-black blur-2xl rounded-full absolute flex  justify-center items-center inset-0 mx-auto"></div>
+        <div className="flex justify-center text-center items-center inset-0 absolute mx-16">
+          <span className={`${roboto} text-white text-2xl md:text-5xl `}>
             Supercharge Your Open Source Journey
           </span>
         </div>
       </div>
       {/* 3 box's */}
       <div className="border-b-[1px] border-t-[1px] border-[#202020] mb-6 ">
-        <div className="relative flex w-full mx-auto px-1 h-full">
+        <div className="relative flex flex-col md:flex-row w-full mx-auto px-1 h-full">
           {/* 1st box */}
-          <div className="w-full border-r-[1px] border-[#202020] p-2">
+          <div className="w-full md:w-1/3 border-b-[1px] md:border-r-[1px] border-[#202020] p-2">
             <div className="relative border border-dashed border-[#202020] h-full p-7">
               {/* Grid effect */}
               <FlickeringGrid
@@ -50,10 +50,10 @@ const Journey = () => {
 
               {/* Text */}
               <div className={`${sans}`}>
-                <p className="text-3xl tracking-[-0.07em]">
+                <p className="text-2xl md:text-3xl tracking-[-0.07em]">
                   Personalized Recommendations
                 </p>
-                <p className="text-gray-400">
+                <p className="text-gray-400 text-sm md:text-base">
                   Get personalized repos you can contribute to.
                 </p>
               </div>
@@ -68,13 +68,15 @@ const Journey = () => {
                     animate={{ y: 0, opacity: 1 }}
                     transition={{
                       duration: 0.5,
-                      delay: index * 0.3, // each one appears after the previous
+                      delay: index * 0.3,
                       ease: "easeOut",
                     }}
                   >
                     <div>
-                      <p className="font-medium">{box.title}</p>
-                      <span className="text-sm text-gray-400">
+                      <p className="font-medium text-sm md:text-base">
+                        {box.title}
+                      </p>
+                      <span className="text-xs md:text-sm text-gray-400">
                         {box.subtitle}
                       </span>
                     </div>
@@ -83,8 +85,9 @@ const Journey = () => {
               </div>
             </div>
           </div>
+
           {/* 2nd box */}
-          <div className="relative  w-full border-r-[1px] border-[#202020] p-2 overflow-hidden ">
+          <div className="relative w-full md:w-1/3 border-b-[1px] md:border-r-[1px] border-[#202020] p-2 overflow-hidden">
             <div className="border border-dashed border-[#202020] ">
               <div className="absolute inset-2">
                 <FlickeringGrid
@@ -97,15 +100,16 @@ const Journey = () => {
               </div>
 
               {/* Wheel wrapper */}
-              <div className=" flex items-center justify-center overflow-hidden">
+              <div className="flex items-center justify-center overflow-hidden">
                 <div className="w-full aspect-square relative">
                   <RoataingWheel />
                 </div>
               </div>
             </div>
           </div>
+
           {/* 3rd box */}
-          <div className="relative w-full p-2 ">
+          <div className="relative w-full md:w-1/3 p-2">
             <div className="border border-dashed border-[#202020] h-full">
               <div className="absolute inset-2">
                 <FlickeringGrid
@@ -116,13 +120,13 @@ const Journey = () => {
                   className=""
                 />
               </div>
-              <div className={`p-9 ${sans}`}>
-                <p className="text-3xl">Precision Filters</p>
-                <p className="text-gray-400">
+              <div className={`p-6 md:p-9 ${sans}`}>
+                <p className="text-2xl md:text-3xl">Precision Filters</p>
+                <p className="text-gray-400 text-sm md:text-base">
                   Zero in on projects by language, stack and activity level.
                 </p>
               </div>
-              <div className="mx-12">
+              <div className="mx-4 md:mx-12">
                 <AnimatedCards />
               </div>
             </div>

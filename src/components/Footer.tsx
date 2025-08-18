@@ -24,21 +24,21 @@ const Footer = () => {
           ></div>
         </div>
         <div className="flex justify-between mx-16">
-          <div className="p-5">
-            <h1 className={`text-6xl ${edu} tracking-wider`}>Open-Ai</h1>
+          <div className="p-3 md:p-5">
+            <h1 className={`text-3xl md:text-6xl ${edu} tracking-wider`}>Open-Ai</h1>
             <p className={`text-2xl font-light text-gray-400 ${roboto}`}>
               Search. Find. Contribute
             </p>
           </div>
-          <div className="flex gap-3 mt-8 p-4">
-            <RiTwitterXFill className="text-2xl hover:text-[#1646bd] cursor-pointer transition-colors duration-300" />
-            <MdOutlineMail className="text-2xl hover:text-[#1646bd] cursor-pointer transition-colors duration-300" />
-            <LuGithub className="text-2xl hover:text-[#1646bd] cursor-pointer transition-colors duration-300" />
+          <div className="flex gap-3 mt-8 md:p-4">
+            <RiTwitterXFill className="text-xl md:text-2xl hover:text-[#1646bd] cursor-pointer transition-colors duration-300" />
+            <MdOutlineMail className="text-xl md:text-2xl hover:text-[#1646bd] cursor-pointer transition-colors duration-300" />
+            <LuGithub className="text-xl md:text-2xl hover:text-[#1646bd] cursor-pointer transition-colors duration-300" />
           </div>
         </div>
-        <div className="flex flex-col items-center justify-center mt-24 space-y-1 text-gray-400">
-          <h3>© 2025 Opensox AI. All rights reserved.</h3>
-          <h4 className="text-sm">
+        <div className="flex flex-col items-center justify-center mt-24 space-y-1 text-gray-400 ">
+          <h3 className="text-sm">© 2025 Opensox AI. All rights reserved.</h3>
+          <h4 className="text-xs">
             Building 21st century open-source infrastructure
           </h4>
         </div>

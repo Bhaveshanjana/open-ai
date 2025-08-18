@@ -5,19 +5,19 @@ import React from "react";
 const Cta = () => {
   return (
     <div className="mb-12">
-      <div className="mx-12 h-[400px] rounded-3xl relative bg-transparent lg:bg-gradient-to-r from-white via-[#101010] to-white">
+      <div className="mx-3 md:mx-12 h-[400px] rounded-3xl relative bg-transparent lg:bg-gradient-to-r from-white via-[#101010] to-white">
         <Image
           alt="bg"
           height="100"
           width="100"
           src="/ctagradient.svg"
-          className=" w-full inset-0 h-full  mt-4 object-cover "
+          className=" w-full inset-0 h-full  mt-4 object-cover rounded-2xl"
         />
-        <div className="absolute flex justify-center flex-col items-center inset-0 w-2xl mx-auto">
-          <p className={`text-7xl text-center  ${roboto}`}>
+        <div className="absolute flex justify-center flex-col items-center inset-0 w-xs md:w-2xl mx-auto">
+          <p className={`text-2xl md:text-7xl text-center  ${roboto}`}>
             Ready to Find Your Perfect Repo?
           </p>
-          <span className={`text-gray-400 text-2xl font-extralight ${manrope}`}>
+          <span className={`text-gray-400 text-sm  md:text-2xl font-extralight ${manrope}`}>
             Join 6,500+ engineers accelerating in open-source.
           </span>
           {/* Get start Button */}

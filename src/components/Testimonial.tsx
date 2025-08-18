@@ -10,11 +10,11 @@ const testimonials = [
   { name: "Chris Paul", text: "A seamless and enjoyable process." },
 ];
 
-const TestimonialCard = ({ name, text }) => (
-  <div className="bg-[#1b1b1b4c] text-white  rounded-xl shadow-md w-full h-full flex flex-col justify-start border border-[#202020]">
-    <div className="p-12 -ml-5 -mt-5 ">
-      <p className="text-lg font-medium mb-1">{name}</p>
-      <p className="text-sm text-gray-300 ">{text}</p>
+const TestimonialCard = ({ name, text }: { name: string; text: string }) => (
+  <div className="bg-[#1b1b1b4c] text-white rounded-xl shadow-md w-full h-full flex flex-col justify-start border border-[#202020]">
+    <div className="p-6 sm:p-8 md:p-12 -ml-2 sm:-ml-3 md:-ml-5 -mt-2 sm:-mt-3 md:-mt-5">
+      <p className="text-base sm:text-lg font-medium mb-1">{name}</p>
+      <p className="text-xs sm:text-sm md:text-base text-gray-300">{text}</p>
     </div>
   </div>
 );
@@ -33,9 +33,9 @@ export default function Testimonials() {
           height={180}
           width={1540}
         />
-        <div className="h-full w-3xl bg-black blur-2xl rounded-full absolute flex  justify-center items-center inset-0 mx-auto"></div>
+        <div className="h-full w-52 md:w-3xl bg-black blur-2xl rounded-full absolute flex  justify-center items-center inset-0 mx-auto"></div>
         <h1
-          className={`text-4xl absolute flex justify-center items-center inset-0 ${roboto}`}
+          className={`text-2xl md:text-4xl absolute flex justify-center items-center inset-0 ${roboto}`}
         >
           Testimonials
         </h1>
@@ -61,23 +61,23 @@ export default function Testimonials() {
 
         {/* Bottom Blur */}
         <div className="absolute bottom-0  blur-xl w-full h-44 bg-gradient-to-t from-black via-black/70 to-transparent z-10 pointer-events-none"></div>
-        <div className="relative flex gap-10 max-w-7xl mx-auto overflow-hidden">
-          {/* Left column - scroll up */}
-          <div className="flex flex-col gap-6 animate-scroll-up">
+        <div className="relative flex flex-col md:flex-row gap-6 md:gap-10 max-w-7xl mx-auto overflow-hidden">
+          {/* Left column - hidden on mobile */}
+          <div className="hidden md:flex flex-col gap-6 animate-scroll-up">
             {[...testimonials, ...testimonials].map((t, i) => (
               <TestimonialCard key={`left-${i}`} {...t} />
             ))}
           </div>
 
-          {/* Center column - scroll down */}
-          <div className="flex flex-col gap-6 animate-scroll-down">
+          {/* Center column - always visible */}
+          <div className="flex flex-col gap-6 animate-scroll-down ">
             {[...testimonials, ...testimonials].map((t, i) => (
               <TestimonialCard key={`center-${i}`} {...t} />
             ))}
           </div>
 
-          {/* Right column - scroll up */}
-          <div className="flex flex-col gap-6 animate-scroll-up">
+          {/* Right column - hidden on mobile */}
+          <div className="hidden md:flex flex-col gap-6 animate-scroll-up">
             {[...testimonials, ...testimonials].map((t, i) => (
               <TestimonialCard key={`right-${i}`} {...t} />
             ))}

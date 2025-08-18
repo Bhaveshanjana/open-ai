@@ -1,16 +1,14 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, ReactNode } from "react";
 import { motion } from "framer-motion";
 import { FaChartLine, FaChartBar } from "react-icons/fa";
-import { Icon } from "next/dist/lib/metadata/types/metadata-types";
 import { RiNextjsFill } from "react-icons/ri";
 import { TbBrandTypescript } from "react-icons/tb";
 import { SiExpress } from "react-icons/si";
 
 interface FilterItem {
   label: string;
-  color: string;
-  icon: Icon;
+  icon: ReactNode;
 }
 
 interface CardData {
@@ -113,10 +111,8 @@ export default function AnimatedCardStack() {
   }, []);
 
   return (
-    <div className="relative w-[400px] h-[250px] flex items-center justify-center">
+    <div className="relative w-full max-w-[400px] aspect-[16/10] flex items-center justify-center mx-auto">
       {cardOrder.map((card, index) => {
-        const isTop = index === 0;
-
         return (
           <motion.div
             key={card.title}
@@ -127,14 +123,14 @@ export default function AnimatedCardStack() {
               scale: 1 - index * 0.02,
             }}
             transition={{ duration: 0.2 }}
-            className={`absolute rounded-3xl p-7 w-full bg-gradient-to-t from-[#212121f1] to-[#2e2c2c24] backdrop-blur-2xl border border-white/10 shadow-xl`}
+            className="absolute rounded-3xl p-5 sm:p-7 w-full bg-gradient-to-t from-[#212121f1] to-[#2e2c2c24] backdrop-blur-2xl border border-white/10 shadow-xl"
             style={{
               zIndex: cards.length - index,
             }}
           >
             {/* Title */}
-            <h3 className="text-white font-medium mb-4 flex items-center gap-1">
-              <span className="text-green-400">{card.filters[0].icon}</span>{" "}
+            <h3 className="text-white font-medium mb-4 flex items-center gap-1 text-base sm:text-lg">
+              <span className="text-green-400">{card.filters[0].icon}</span>
               {card.title}
             </h3>
 
@@ -143,9 +139,9 @@ export default function AnimatedCardStack() {
               {card.filters.map((f, idx) => (
                 <div
                   key={idx}
-                  className={`flex items-center gap-1 px-2 py-0.5 rounded-lg text-sm font-medium text-white border border-[#ffffff26] bg-black/5`}
+                  className="flex items-center gap-1 px-2 py-0.5 rounded-lg text-xs sm:text-sm font-medium text-white border border-[#ffffff26] bg-black/5"
                 >
-                  <span className="text-xs flex gap-2 items-center">
+                  <span className="flex gap-2 items-center">
                     {f.icon} {f.label}
                   </span>
                 </div>

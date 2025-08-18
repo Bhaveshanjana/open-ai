@@ -7,7 +7,6 @@ import Preview from "./Preview";
 import Statistics from "./Statistics";
 import Testimonials from "./Testimonial";
 import Start from "./Cta";
-import Footer from "./Footer";
 
 const HeroSection = () => {
   return (
@@ -71,8 +70,6 @@ const HeroSection = () => {
       <Testimonials />
       {/* Get Start section */}
       <Start />
-      {/* Footer */}
-      <Footer />
     </>
   );
 };

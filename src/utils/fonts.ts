@@ -2,7 +2,6 @@ import {
   Bricolage_Grotesque,
   DM_Sans,
   Manrope,
-  Michroma,
   Quicksand,
   Roboto_Flex,
   VT323,

@@ -1,34 +1,38 @@
-import { sans } from "@/utils/fonts";
+import { edu, manrope, roboto, sans } from "@/utils/fonts";
 import Image from "next/image";
 import React from "react";
 
 const RoataingWheel = () => {
   return (
     <>
-      <div className="mt-8 relative w-full text-white overflow-hidden">
+      <div className="p-4 md:p-7 relative w-full md:h-[67.5vh] text-white overflow-hidden">
         {/* Text content */}
-        <div className={`text-start translate-x-7 ${sans}`}>
-          <h2 className={`text-3xl`}>Seamless Search</h2>
-          <p className="text-gray-400">
+        <div className="text-start">
+          <h2 className={`text-3xl tracking-tighter ${sans}`}>
+            Seamless Search
+          </h2>
+          <p className={`text-gray-400 text-xs md:text-base ${manrope}`}>
             Search thousands of open-source repos instantly.
           </p>
         </div>
 
         {/* Wheel wrapper */}
-        <div className="translate-y-24 relative w-[350px] aspect-square mx-auto">
+        <div className="translate-y-28 md:translate-y-28 relative w-[310px] md:w-[400px] aspect-square mx-auto">
           {/* Outer rings */}
           <div className="absolute inset-0 rounded-full border border-white/5 bg-neutral-900/5 backdrop-blur-xl [box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]"></div>
           <div className="absolute inset-[45px] rounded-full border border-white/5 backdrop-blur-xl [box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]"></div>
           <div className="absolute inset-[90px] rounded-full border border-white/5 backdrop-blur-xl [box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]"></div>
 
           {/* Center text */}
-          <div className="absolute inset-[90px] flex items-center justify-center text-lg font-bold">
+          <div
+            className={`absolute inset-[90px] flex items-center justify-center text-2xl tracking-wider ${edu}`}
+          >
             Open- AI
           </div>
 
           {/* Orbiting icons layer 1 */}
           <div className="absolute inset-0 animate-spin-slow">
-            <div className="absolute w-9 h-9 -top-4 left-1/2 -translate-x-1/2 p-1 animate-spin-slow-reverse bg-white rounded-xl flex items-center justify-center">
+            <div className="absolute w-8 h-8 -top-3 left-1/2 -translate-x-1/2 p-1 animate-spin-slow-reverse bg-white rounded-xl flex items-center justify-center">
               {/* Svg */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +53,7 @@ const RoataingWheel = () => {
                 ></path>
               </svg>
             </div>
-            <div className="absolute w-9 h-9 right-[20px] bottom-[60px] animate-spin-slow-reverse bg-white p-1 rounded-xl flex  items-center justify-center">
+            <div className="absolute w-8 h-8 right-[10px] md:right-[25px] bottom-[60px] animate-spin-slow-reverse bg-white p-1 rounded-xl flex  items-center justify-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 226 240"
@@ -61,7 +65,7 @@ const RoataingWheel = () => {
                 ></path>
               </svg>
             </div>
-            <div className="absolute w-10 h-10 left-0 bottom-[100px] animate-spin-slow-reverse rounded-xl flex items-center justify-center bg-black">
+            <div className="absolute w-8 h-8 md:w-9 md:h-9 left-0 bottom-[70px] md:bottom-[100px] animate-spin-slow-reverse rounded-xl flex items-center justify-center bg-black">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 1000 1000"
@@ -86,7 +90,7 @@ const RoataingWheel = () => {
 
           {/* Orbiting icons layer 2 */}
           <div className="absolute inset-0 animate-spin-slow-reverse">
-            <div className="absolute w-9 h-9 top-[100px] left-[50px] animate-spin-slow bg-white rounded-xl flex items-center justify-center">
+            <div className="absolute w-8 h-8 top-[80px] md:top-[100px] left-[50px] animate-spin-slow bg-white rounded-xl flex items-center justify-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 18 18"
@@ -98,7 +102,7 @@ const RoataingWheel = () => {
                 ></path>
               </svg>
             </div>
-            <div className="absolute w-10 h-10 bottom-[100px] right-[50px] animate-spin-slow  p-1.5 rounded-xl flex items-center justify-center bg-black">
+            <div className="absolute w-8 h-8 bottom-[80px] md:bottom-[100px] right-[50px] animate-spin-slow  p-1.5 rounded-xl flex items-center justify-center bg-black">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 191 191"
@@ -115,7 +119,7 @@ const RoataingWheel = () => {
 
           {/* Orbiting icons layer 3 */}
           <div className="absolute inset-0 animate-spin-slow">
-            <div className="absolute w-10 h-10 top-[120px] right-[90px] bottom-[120px] left-[90px] flex items-center justify-center animate-spin-slow-reverse bg-black rounded-xl">
+            <div className="absolute w-8 h-8 top-[90px] md:top-[120px] right-[90px] bottom-[100px] left-[90px] flex items-center justify-center animate-spin-slow-reverse bg-black rounded-xl">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 206 168"
@@ -128,7 +132,7 @@ const RoataingWheel = () => {
                 ></path>
               </svg>
             </div>
-            <div className="absolute w-9 h-9 bottom-[120px] left-[90px] animate-spin-slow-reverse bg-white p-2 rounded-xl flex items-center justify-center">
+            <div className="absolute w-8 h-8 bottom-[90px] md:bottom-[120px] left-[90px] animate-spin-slow-reverse bg-white p-2 rounded-xl flex items-center justify-center">
               <Image
                 loading="lazy"
                 height="100"
@@ -139,8 +143,8 @@ const RoataingWheel = () => {
             </div>
           </div>
         </div>
+        <div className="absolute h-[40%] w-full -bottom-1 left-1/2  -translate-x-1/2 bg-gradient-to-t from-[#000000ee] to-transparent "></div>
       </div>
-      <div className="absolute h-[20%] w-full -bottom-1 left-1/2 -translate-x-1/2 bg-gradient-to-t from-[#000000ee] to-transparent "></div>
     </>
   );
 };

@@ -1,20 +1,60 @@
 import React from "react";
 import { FlickeringGrid } from "./ui/bg";
-import { roboto } from "@/utils/fonts";
+import { bricolage, roboto, sans } from "@/utils/fonts";
 
 const testimonials = [
-  { name: "John Doe", text: "This service changed my life!" },
-  { name: "Sarah Lee", text: "Absolutely amazing experience." },
-  { name: "Mike Ross", text: "Highly recommended for everyone." },
-  { name: "Emily Clark", text: "The best decision I've made this year." },
-  { name: "Chris Paul", text: "A seamless and enjoyable process." },
+  {
+    name: "John Doe",
+    text: "This service changed my life!",
+    image: "/avatars/alex-suprun.jpg",
+  },
+  {
+    name: "Sarah Lee",
+    text: "Absolutely amazing experience.",
+    image: "/avatars/alex-suprun.jpg",
+  },
+  {
+    name: "Mike Ross",
+    text: "Highly recommended for everyone.",
+    image: "/avatars/diego-hernandez.jpg",
+  },
+  {
+    name: "Emily Clark",
+    text: "The best decision I've made this year.",
+    image: "/avatars/stefan-stefancik.jpg",
+  },
+  {
+    name: "Chris Paul",
+    text: "A seamless and enjoyable process.",
+    image: "/avatars/zhanarys-dakhiyev.jpg",
+  },
 ];
 
-const TestimonialCard = ({ name, text }: { name: string; text: string }) => (
-  <div className="bg-[#1b1b1b4c] text-white rounded-xl shadow-md w-full h-full flex flex-col justify-start border border-[#202020]">
-    <div className="p-6 sm:p-8 md:p-12 -ml-2 sm:-ml-3 md:-ml-5 -mt-2 sm:-mt-3 md:-mt-5">
-      <p className="text-base sm:text-lg font-medium mb-1">{name}</p>
-      <p className="text-xs sm:text-sm md:text-base text-gray-300">{text}</p>
+const TestimonialCard = ({
+  name,
+  text,
+  image,
+}: {
+  name: string;
+  text: string;
+  image: string;
+}) => (
+  <div className="bg-[#1b1b1b4c] text-white rounded-xl shadow-md w-full h-full flex flex-col justify-start border border-[#ffffff1f] hover:shadow-lg hover:scale-[1.02] transition-all duration-300">
+    <div className="flex items-start gap-3 p-8  md:p-12 -ml-4 md:-ml-8 -mt-3 md:-mt-8">
+      {/* Avatar */}
+      <img
+        src={image}
+        alt={name}
+        className="w-10 h-10 sm:w-14 sm:h-14 rounded-full border border-gray-700 object-cover"
+      />
+
+      {/* Text Section */}
+      <div>
+        <p className={`text-base sm:text-lg font-medium ${bricolage}`}>
+          {name}
+        </p>
+        <p className={`text-xs md:text-sm text-gray-400 ${sans}`}>{text}</p>
+      </div>
     </div>
   </div>
 );
@@ -33,13 +73,14 @@ export default function Testimonials() {
           height={180}
           width={1540}
         />
-        <div className="h-full w-52 md:w-3xl bg-black blur-2xl rounded-full absolute flex  justify-center items-center inset-0 mx-auto"></div>
+        <div className="h-full w-52 md:w-3xl bg-black blur-2xl rounded-full absolute flex justify-center items-center inset-0 mx-auto"></div>
         <h1
           className={`text-2xl md:text-4xl absolute flex justify-center items-center inset-0 ${roboto}`}
         >
           Testimonials
         </h1>
       </div>
+
       <div className="relative w-full h-[80vh] bg-[#0c0a0a] flex justify-center overflow-hidden border-t border-b border-[#202020]">
         {/* Left dashed pattern */}
         <div
@@ -55,12 +96,13 @@ export default function Testimonials() {
                [background-size:10px_10px] bg-fixed right-0 z-20"
         ></div>
 
-        {/* Inner content area for columns */}
         {/* Top Blur */}
-        <div className="absolute top-0 blur-xl w-full h-44 bg-gradient-to-b from-black via-black/70 to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute top-0 w-full h-40 bg-gradient-to-b from-black via-black/70 to-transparent z-10 pointer-events-none"></div>
 
         {/* Bottom Blur */}
-        <div className="absolute bottom-0  blur-xl w-full h-44 bg-gradient-to-t from-black via-black/70 to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute bottom-0 w-full h-40 bg-gradient-to-t from-black via-black/70 to-transparent z-10 pointer-events-none"></div>
+
+        {/* Columns */}
         <div className="relative flex flex-col md:flex-row gap-6 md:gap-10 max-w-7xl mx-auto overflow-hidden">
           {/* Left column - hidden on mobile */}
           <div className="hidden md:flex flex-col gap-6 animate-scroll-up">
@@ -70,7 +112,7 @@ export default function Testimonials() {
           </div>
 
           {/* Center column - always visible */}
-          <div className="flex flex-col gap-6 animate-scroll-down ">
+          <div className="flex flex-col gap-6 animate-scroll-down w-64 md:w-fit">
             {[...testimonials, ...testimonials].map((t, i) => (
               <TestimonialCard key={`center-${i}`} {...t} />
             ))}

@@ -123,7 +123,7 @@ export default function AnimatedCardStack() {
               scale: 1 - index * 0.02,
             }}
             transition={{ duration: 0.2 }}
-            className="absolute rounded-3xl p-5 sm:p-7 w-full bg-gradient-to-t from-[#212121f1] to-[#2e2c2c24] backdrop-blur-2xl border border-white/10 shadow-xl"
+            className="absolute rounded-4xl p-5 py-9 w-full bg-gradient-to-t from-[#212121f1] to-[#2e2c2c24] backdrop-blur-2xl border border-white/10 shadow-xl"
             style={{
               zIndex: cards.length - index,
             }}

@@ -4,7 +4,7 @@ import React from "react";
 
 const Cta = () => {
   return (
-    <div className="mb-12">
+    <div className="mb-6">
       <div className="mx-3 md:mx-12 h-[400px] rounded-3xl relative bg-transparent lg:bg-gradient-to-r from-white via-[#101010] to-white">
         <Image
           alt="bg"

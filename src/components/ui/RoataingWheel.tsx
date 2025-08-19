@@ -1,4 +1,4 @@
-import { edu, manrope, roboto, sans } from "@/utils/fonts";
+import { edu, manrope, sans } from "@/utils/fonts";
 import Image from "next/image";
 import React from "react";
 

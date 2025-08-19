@@ -1,6 +1,7 @@
 import React from "react";
 import { FlickeringGrid } from "./ui/bg";
 import { bricolage, roboto, sans } from "@/utils/fonts";
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -42,7 +43,9 @@ const TestimonialCard = ({
   <div className="bg-[#1b1b1b4c] text-white rounded-xl shadow-md w-full h-full flex flex-col justify-start border border-[#ffffff1f] hover:shadow-lg hover:scale-[1.02] transition-all duration-300">
     <div className="flex items-start gap-3 p-8  md:p-12 -ml-4 md:-ml-8 -mt-3 md:-mt-8">
       {/* Avatar */}
-      <img
+      <Image
+        height="100"
+        width="100"
         src={image}
         alt={name}
         className="w-10 h-10 sm:w-14 sm:h-14 rounded-full border border-gray-700 object-cover"

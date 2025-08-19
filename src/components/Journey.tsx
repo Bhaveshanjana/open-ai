@@ -16,7 +16,7 @@ const Journey = () => {
     }, 1000); // 1s delay per box
 
     return () => clearInterval(interval);
-  }, []);
+  });
   const boxes = [
     {
       title: "OSS Google Docs!",
@@ -124,7 +124,7 @@ const Journey = () => {
               {/* Animated cards */}
               <div className="mt-6 p-2">
                 <AnimatePresence>
-                  {boxes.slice(0, visibleCount).map((box, index) => (
+                  {boxes.slice(0, visibleCount).map((box) => (
                     <motion.div
                       key={box.title}
                       className="flex justify-start items-center bg-gradient-to-t from-[#212121f1] to-[#2e2c2c24] rounded-2xl p-4 mt-4 backdrop-blur-md border border-[#3d3a3a5c]"

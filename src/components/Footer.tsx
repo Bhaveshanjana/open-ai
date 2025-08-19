@@ -46,9 +46,9 @@ const Footer = () => {
 
         {/* Footer - now properly at the bottom */}
         <div className="flex flex-col items-center justify-center -space-y-0.5 text-gray-400">
-          <h3 className="md:text-lg">© 2025 Open AI, an clone project.</h3>
+          <h3 className="md:text-lg">{"© 2025 Open AI, an clone project."}</h3>
           <h4 className="text-[11px] md:text-sm">
-            Building 21st century website's
+            {"Building 21st century website's"}
           </h4>
           <span className="text-[8px]">Made by bhavesh</span>
         </div>

@@ -1,11 +1,11 @@
-// const baseUrl = "https://www.opemai.mom";
+const baseUrl = "https://opensphere.vercel.app/";
 
 export const siteConfig = {
   authors: "Bhavesh",
-  name: "Open-ai",
+  name: "OpenSphere",
   description:
     "Find your perfect Open-Source Repo. Discover top open-source projects in seconds. Filter by language, framework, or niche — and start contributing in seconds, not hours.",
-  //   url: baseUrl,
+    url: baseUrl,
   twitterHandle: "@Bhavesh2034",
   keywords: [
     "Open Source",

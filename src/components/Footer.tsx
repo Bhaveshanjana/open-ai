@@ -38,8 +38,8 @@ const Footer = () => {
             className="flex justify-between mx-16"
           >
             <div className="md:p-5">
-              <h1 className={`text-3xl md:text-6xl ${edu} tracking-wider`}>
-                Open-Ai
+              <h1 className={`text-3xl md:text-5xl ${edu} tracking-wider`}>
+                OpenSphere
               </h1>
               <p className={`md:text-2xl font-light text-gray-400 ${roboto}`}>
                 Search. Find. Contribute
@@ -59,11 +59,11 @@ const Footer = () => {
           viewport={{ amount: 0.5 }}
           className="flex flex-col items-center justify-center -space-y-0.5 text-gray-400"
         >
-          <h3 className="md:text-lg">{"© 2025 Open AI, an clone project."}</h3>
+          <h3 className="md:text-lg">{"© 2025 OpenSphere, an clone project."}</h3>
           <h4 className="text-[11px] md:text-sm">
-            {"Building 21st century website's"}
+            {"Building 21st century website's."}
           </h4>
-          <span className="text-[8px]">Made by bhavesh</span>
+          <span className="text-[9px]">Made by Bhavesh</span>
         </motion.div>
       </div>
     </>

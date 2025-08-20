@@ -52,7 +52,7 @@ const NavBar = () => {
           {/* Nav logo */}
           <div className="flex items-center gap-2">
             <Image alt="Navlogo" height="40" width="40" src="/navlogo.svg" className="size-7"/>
-            <span className={`${edu} text-lg md:text-2xl tracking-wider text-white w-20`}>Open-ai</span>
+            <span className={`${edu} text-lg md:text-2xl tracking-wider text-white w-20`}>OpenSphere</span>
           </div>
           {/* Links */}
           <div className="flex list-none gap-6">

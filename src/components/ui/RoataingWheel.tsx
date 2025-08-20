@@ -30,7 +30,7 @@ const RoataingWheel = () => {
           <div
             className={`absolute inset-[90px] flex items-center justify-center text-2xl tracking-wider ${edu}`}
           >
-            Open- AI
+            OpenSphere
           </div>
 
           {/* Orbiting icons layer 1 */}

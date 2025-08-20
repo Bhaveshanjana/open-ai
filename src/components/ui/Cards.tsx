@@ -5,6 +5,7 @@ import { FaChartLine, FaChartBar } from "react-icons/fa";
 import { RiNextjsFill } from "react-icons/ri";
 import { TbBrandTypescript } from "react-icons/tb";
 import { SiExpress } from "react-icons/si";
+import { sans } from "@/utils/fonts";
 
 interface FilterItem {
   label: string;
@@ -129,7 +130,9 @@ export default function AnimatedCardStack() {
             }}
           >
             {/* Title */}
-            <h3 className="text-white font-medium mb-4 flex items-center gap-1 text-base sm:text-lg">
+            <h3
+              className={`text-white mb-4 flex items-center gap-1 text-base sm:text-lg ${sans}`}
+            >
               <span className="text-green-400">{card.filters[0].icon}</span>
               {card.title}
             </h3>
@@ -139,9 +142,9 @@ export default function AnimatedCardStack() {
               {card.filters.map((f, idx) => (
                 <div
                   key={idx}
-                  className="flex items-center gap-1 px-2 py-0.5 rounded-lg text-xs sm:text-sm font-medium text-white border border-[#ffffff26] bg-black/5"
+                  className="flex items-center gap-1 px-2 py-0.5 rounded-lg text-xs sm:text-sm  text-white border border-[#ffffff26] bg-black/5"
                 >
-                  <span className="flex gap-2 items-center">
+                  <span className={`flex gap-2 items-center ${sans}`}>
                     {f.icon} {f.label}
                   </span>
                 </div>

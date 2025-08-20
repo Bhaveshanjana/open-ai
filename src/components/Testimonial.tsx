@@ -1,7 +1,10 @@
+"use client";
+
 import React from "react";
 import { FlickeringGrid } from "./ui/bg";
 import { bricolage, roboto, sans } from "@/utils/fonts";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const testimonials = [
   {
@@ -77,11 +80,15 @@ export default function Testimonials() {
           width={1540}
         />
         <div className="h-full w-52 md:w-3xl bg-black blur-2xl rounded-full absolute flex justify-center items-center inset-0 mx-auto"></div>
-        <h1
+        <motion.h1
+          initial={{ x: 100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ amount: 0.5 }}
           className={`text-2xl md:text-4xl absolute flex justify-center items-center inset-0 ${roboto}`}
         >
           Testimonials
-        </h1>
+        </motion.h1>
       </div>
 
       <div className="relative w-full h-[80vh] bg-[#0c0a0a] flex justify-center overflow-hidden border-t border-b border-[#202020]">

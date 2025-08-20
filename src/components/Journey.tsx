@@ -2,10 +2,11 @@
 
 import React, { useEffect, useState } from "react";
 import { FlickeringGrid } from "./ui/bg";
-import { manrope, roboto, sans } from "@/utils/fonts";
+import { bricolage, manrope, roboto, sans } from "@/utils/fonts";
 import RoataingWheel from "./ui/RoataingWheel";
 import AnimatedCards from "./ui/Cards";
 import { AnimatePresence, motion } from "framer-motion";
+import TextEffect from "@/utils/TextMotion";
 
 const Journey = () => {
   const [visibleCount, setVisibleCount] = useState(0);
@@ -90,9 +91,11 @@ const Journey = () => {
         />
         <div className="md:h-full h-44 w-52 md:w-5xl bg-black blur-2xl rounded-full absolute flex  justify-center items-center inset-0 mx-auto"></div>
         <div className="flex justify-center text-center items-center inset-0 absolute mx-16">
-          <span className={`${roboto} text-white text-2xl md:text-5xl `}>
-            Supercharge Your Open Source Journey
-          </span>
+          <TextEffect delay={0.2}>
+            <span className={`${roboto} text-white text-2xl md:text-5xl `}>
+              Supercharge Your Open Source Journey
+            </span>
+          </TextEffect>
         </div>
       </div>
       {/* 3 box's */}
@@ -110,16 +113,20 @@ const Journey = () => {
                 className="absolute inset-1.5"
               />
               {/* Text */}
-              <div>
-                <p
-                  className={`text-2xl md:text-3xl tracking-[-0.07em] ${sans}`}
-                >
-                  Personalized Recommendations
-                </p>
-                <p className={`text-gray-400 text-xs md:text-base ${manrope}`}>
-                  Get personalized repos you can contribute to.
-                </p>
-              </div>
+              <TextEffect delay={0.2}>
+                <div>
+                  <p
+                    className={`text-2xl md:text-3xl tracking-[-0.07em] ${sans}`}
+                  >
+                    Personalized Recommendations
+                  </p>
+                  <p
+                    className={`text-gray-400 text-xs md:text-base ${manrope}`}
+                  >
+                    Get personalized repos you can contribute to.
+                  </p>
+                </div>
+              </TextEffect>
 
               {/* Animated cards */}
               <div className="mt-6 p-2">
@@ -142,10 +149,12 @@ const Journey = () => {
                           <span>{box.svg}</span>
                         </div>
                         <div>
-                          <p className="font-medium text-sm md:text-base">
+                          <p className={` text-sm md:text-base ${sans}`}>
                             {box.title}
                           </p>
-                          <span className="text-xs md:text-sm text-gray-400">
+                          <span
+                            className={`text-xs md:text-sm text-gray-400 ${bricolage}`}
+                          >
                             {box.subtitle}
                           </span>
                         </div>
@@ -191,14 +200,18 @@ const Journey = () => {
                   className=""
                 />
               </div>
-              <div className="p-7">
-                <p className={`text-2xl md:text-3xl tracking-tight ${sans}`}>
-                  Precision Filters
-                </p>
-                <p className={`text-gray-400 text-xs md:text-base ${manrope}`}>
-                  Zero in on projects by language, stack and activity level.
-                </p>
-              </div>
+              <TextEffect delay={0.2}>
+                <div className="p-7">
+                  <p className={`text-2xl md:text-3xl tracking-tight ${sans}`}>
+                    Precision Filters
+                  </p>
+                  <p
+                    className={`text-gray-400 text-xs md:text-base ${manrope}`}
+                  >
+                    Zero in on projects by language, stack and activity level.
+                  </p>
+                </div>
+              </TextEffect>
               <div className="mx-4 ">
                 <AnimatedCards />
               </div>

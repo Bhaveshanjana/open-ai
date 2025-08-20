@@ -1,20 +1,23 @@
 import { edu, manrope, sans } from "@/utils/fonts";
 import Image from "next/image";
 import React from "react";
+import TextEffect from "@/utils/TextMotion";
 
 const RoataingWheel = () => {
   return (
     <>
       <div className="p-4 md:p-7 relative w-full md:h-[67.5vh] text-white overflow-hidden">
         {/* Text content */}
-        <div className="text-start">
-          <h2 className={`text-3xl tracking-tighter ${sans}`}>
-            Seamless Search
-          </h2>
-          <p className={`text-gray-400 text-xs md:text-base ${manrope}`}>
-            Search thousands of open-source repos instantly.
-          </p>
-        </div>
+        <TextEffect delay={0.2}>
+          <div className="text-start">
+            <h2 className={`text-3xl tracking-tighter ${sans}`}>
+              Seamless Search
+            </h2>
+            <p className={`text-gray-400 text-xs md:text-base ${manrope}`}>
+              Search thousands of open-source repos instantly.
+            </p>
+          </div>
+        </TextEffect>
 
         {/* Wheel wrapper */}
         <div className="translate-y-28 md:translate-y-28 relative w-[310px] md:w-[400px] aspect-square mx-auto">

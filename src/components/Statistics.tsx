@@ -1,6 +1,9 @@
+"use client";
+
 import React from "react";
 import { FlickeringGrid } from "./ui/bg";
 import { bricolage, roboto } from "@/utils/fonts";
+import { motion } from "framer-motion";
 
 const Statistics = () => {
   return (
@@ -17,11 +20,15 @@ const Statistics = () => {
           width={1540}
         />
         <div className="h-full w-52 md:w-3xl bg-black blur-2xl rounded-full absolute flex  justify-center items-center inset-0 mx-auto"></div>
-        <h1
+        <motion.h1
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ amount: 0.5 }}
           className={`text-2xl md:text-4xl absolute flex justify-center items-center inset-0 ${roboto}`}
         >
           Statistics
-        </h1>
+        </motion.h1>
       </div>
       <div className="border border-l-[1px] border-r-[1px] border-[#202020] grid grid-cols-2 bg-[#0a213710]">
         {/* Box 1 */}

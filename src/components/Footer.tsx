@@ -1,8 +1,11 @@
+"use client";
+
 import { edu, roboto } from "@/utils/fonts";
 import React from "react";
 import { LuGithub } from "react-icons/lu";
 import { MdOutlineMail } from "react-icons/md";
 import { RiTwitterXFill } from "react-icons/ri";
+import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
@@ -25,9 +28,15 @@ const Footer = () => {
           ></div>
         </div>
 
-        {/* Main content */}
+        {/* text content */}
         <div className="flex-grow flex flex-col">
-          <div className="flex justify-between mx-16">
+          <motion.div
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ amount: 0.5 }}
+            className="flex justify-between mx-16"
+          >
             <div className="md:p-5">
               <h1 className={`text-3xl md:text-6xl ${edu} tracking-wider`}>
                 Open-Ai
@@ -41,20 +50,23 @@ const Footer = () => {
               <MdOutlineMail className="text-xl md:text-2xl hover:text-[#1646bd] cursor-pointer transition-colors duration-300" />
               <LuGithub className="text-xl md:text-2xl hover:text-[#1646bd] cursor-pointer transition-colors duration-300" />
             </div>
-          </div>
+          </motion.div>
         </div>
-
-        {/* Footer - now properly at the bottom */}
-        <div className="flex flex-col items-center justify-center -space-y-0.5 text-gray-400">
+        <motion.div
+          initial={{ y: -100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ amount: 0.5 }}
+          className="flex flex-col items-center justify-center -space-y-0.5 text-gray-400"
+        >
           <h3 className="md:text-lg">{"© 2025 Open AI, an clone project."}</h3>
           <h4 className="text-[11px] md:text-sm">
             {"Building 21st century website's"}
           </h4>
           <span className="text-[8px]">Made by bhavesh</span>
-        </div>
+        </motion.div>
       </div>
     </>
   );
 };
-
 export default Footer;

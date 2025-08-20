@@ -1,6 +1,9 @@
+"use client";
+
 import { manrope, roboto } from "@/utils/fonts";
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
 
 const Cta = () => {
   return (
@@ -13,11 +16,19 @@ const Cta = () => {
           src="/ctagradient.svg"
           className=" w-full inset-0 h-full  mt-4 object-cover rounded-2xl"
         />
-        <div className="absolute flex justify-center flex-col items-center inset-0 w-xs md:w-2xl mx-auto">
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ amount: 0.5 }}
+          className="absolute flex justify-center flex-col items-center inset-0 w-xs md:w-2xl mx-auto"
+        >
           <p className={`text-2xl md:text-7xl text-center  ${roboto}`}>
             Ready to Find Your Perfect Repo?
           </p>
-          <span className={`text-gray-400 text-sm  md:text-2xl font-extralight ${manrope}`}>
+          <span
+            className={`text-gray-400 text-sm  md:text-2xl font-extralight ${manrope}`}
+          >
             Join 6,500+ engineers accelerating in open-source.
           </span>
           {/* Get start Button */}
@@ -41,7 +52,7 @@ const Cta = () => {
               <span className="">Get Start</span>
             </button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

@@ -3,7 +3,6 @@ import Image from "next/image";
 import React from "react";
 import Journey from "./Journey";
 import HowitWorks from "./HowitWorks";
-import Preview from "./Preview";
 import Statistics from "./Statistics";
 import Testimonials from "./Testimonial";
 import Start from "./Cta";

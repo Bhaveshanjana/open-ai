@@ -26,11 +26,11 @@ const HeroSection = () => {
         <div className="z-10 bottom-5 md:bottom-0 flex flex-col text-center justify-center absolute inset-0 md:w-4xl mx-auto">
           <TextEffect delay={0.1}>
             <h1
-              className={`text-4xl md:text-8xl font-medium tracking-tight ${sans}`}
+              className={`text-4xl md:text-8xl font-medium tracking-tight text-gray-100 ${sans}`}
             >
               Find your perfect Open-Source Repo
             </h1>
-            <h2 className={`text-xs md:text-xl w-xs md:w-2xl mx-auto text-gray-300 ${quick}`}>
+            <h2 className={`text-xs md:text-xl w-xs md:w-2xl mx-auto text-gray-400 ${quick}`}>
               Find top open-source repos in seconds. Filter by your language,
               framework, or niche. Start contributing in seconds, not hours.
             </h2>

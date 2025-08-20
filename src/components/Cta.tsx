@@ -23,7 +23,7 @@ const Cta = () => {
           viewport={{ amount: 0.5 }}
           className="absolute flex justify-center flex-col items-center inset-0 w-xs md:w-2xl mx-auto"
         >
-          <p className={`text-2xl md:text-7xl text-center  ${roboto}`}>
+          <p className={`text-2xl md:text-7xl text-center text-gray-100 ${roboto}`}>
             Ready to Find Your Perfect Repo?
           </p>
           <span

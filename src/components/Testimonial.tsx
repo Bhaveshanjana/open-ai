@@ -85,7 +85,7 @@ export default function Testimonials() {
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ amount: 0.5 }}
-          className={`text-2xl md:text-4xl absolute flex justify-center items-center inset-0 ${roboto}`}
+          className={`text-2xl md:text-4xl absolute flex justify-center items-center inset-0 text-gray-100 ${roboto}`}
         >
           Testimonials
         </motion.h1>

@@ -92,7 +92,7 @@ const Journey = () => {
         <div className="md:h-full h-44 w-52 md:w-5xl bg-black blur-2xl rounded-full absolute flex  justify-center items-center inset-0 mx-auto"></div>
         <div className="flex justify-center text-center items-center inset-0 absolute mx-16">
           <TextEffect delay={0.2}>
-            <span className={`${roboto} text-white text-2xl md:text-5xl `}>
+            <span className={`${roboto} text-gray-100 text-2xl md:text-5xl `}>
               Supercharge Your Open Source Journey
             </span>
           </TextEffect>
@@ -116,7 +116,7 @@ const Journey = () => {
               <TextEffect delay={0.2}>
                 <div>
                   <p
-                    className={`text-2xl md:text-3xl tracking-[-0.07em] ${sans}`}
+                    className={`text-2xl md:text-3xl tracking-[-0.07em] text-gray-100 ${sans}`}
                   >
                     Personalized Recommendations
                   </p>
@@ -149,7 +149,7 @@ const Journey = () => {
                           <span>{box.svg}</span>
                         </div>
                         <div>
-                          <p className={` text-sm md:text-base ${sans}`}>
+                          <p className={` text-sm md:text-base text-white ${sans}`}>
                             {box.title}
                           </p>
                           <span
@@ -202,7 +202,7 @@ const Journey = () => {
               </div>
               <TextEffect delay={0.2}>
                 <div className="p-7">
-                  <p className={`text-2xl md:text-3xl tracking-tight ${sans}`}>
+                  <p className={`text-2xl md:text-3xl tracking-tight text-gray-100 ${sans}`}>
                     Precision Filters
                   </p>
                   <p

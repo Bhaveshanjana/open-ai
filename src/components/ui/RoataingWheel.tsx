@@ -10,7 +10,7 @@ const RoataingWheel = () => {
         {/* Text content */}
         <TextEffect delay={0.2}>
           <div className="text-start">
-            <h2 className={`text-3xl tracking-tighter ${sans}`}>
+            <h2 className={`text-3xl tracking-tighter text-gray-100 ${sans}`}>
               Seamless Search
             </h2>
             <p className={`text-gray-400 text-xs md:text-base ${manrope}`}>

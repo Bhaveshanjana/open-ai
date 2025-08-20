@@ -65,7 +65,7 @@ const Hiw = () => {
                   )}
                 </div>
 
-                <h2 className={`text-lg sm:text-xl ${bricolage}`}>
+                <h2 className={`text-lg sm:text-xl text-white ${bricolage}`}>
                   {step.title}
                 </h2>
                 <span className={`text-sm sm:text-base text-gray-400 ${quick}`}>

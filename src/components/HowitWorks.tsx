@@ -23,7 +23,7 @@ const HowitWorks = () => {
         <div className="h-full w-56 md:w-3xl bg-black blur-2xl rounded-full absolute flex  justify-center items-center inset-0 mx-auto"></div>
 
         <h1
-          className={`text-white text-2xl md:text-4xl z-10 absolute inset-0 flex gap-3 justify-center items-center ${roboto}`}
+          className={`text-gray-100 text-2xl md:text-4xl z-10 absolute inset-0 flex gap-3 justify-center items-center ${roboto}`}
         >
           <motion.span
             initial={{ x: -100, opacity: 0 }}

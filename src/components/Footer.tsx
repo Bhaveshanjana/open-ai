@@ -38,7 +38,7 @@ const Footer = () => {
             className="flex justify-between mx-16"
           >
             <div className="md:p-5">
-              <h1 className={`text-3xl md:text-5xl ${edu} tracking-wider`}>
+              <h1 className={`text-3xl md:text-5xl text-gray-100 tracking-wider ${edu}`}>
                 OpenSphere
               </h1>
               <p className={`md:text-2xl font-light text-gray-400 ${roboto}`}>
@@ -46,9 +46,9 @@ const Footer = () => {
               </p>
             </div>
             <div className="flex gap-3 p-3 md:p-4">
-              <RiTwitterXFill className="text-xl md:text-2xl hover:text-[#1646bd] cursor-pointer transition-colors duration-300" />
-              <MdOutlineMail className="text-xl md:text-2xl hover:text-[#1646bd] cursor-pointer transition-colors duration-300" />
-              <LuGithub className="text-xl md:text-2xl hover:text-[#1646bd] cursor-pointer transition-colors duration-300" />
+              <RiTwitterXFill className="text-xl md:text-2xl hover:text-[#1646bd] cursor-pointer transition-colors duration-300 text-gray-300" />
+              <MdOutlineMail className="text-xl md:text-2xl hover:text-[#1646bd] cursor-pointer transition-colors duration-300 text-gray-300" />
+              <LuGithub className="text-xl md:text-2xl hover:text-[#1646bd] cursor-pointer transition-colors duration-300 text-gray-300" />
             </div>
           </motion.div>
         </div>

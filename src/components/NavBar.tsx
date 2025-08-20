@@ -60,7 +60,7 @@ const NavBar = () => {
               <li key={index} className={`${quick} cursor-pointer`}>
                 <Link
                   href={data.href}
-                  className={` hover:text-blue-500  transition-all duration-200 hidden md:block ${quick} `}
+                  className={` hover:text-blue-500  transition-all duration-200 hidden md:block text-gray-100 ${quick} `}
                 >
                   {data.name}
                 </Link>

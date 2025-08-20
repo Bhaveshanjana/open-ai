@@ -63,8 +63,6 @@ const HeroSection = () => {
       </div>
       {/* Journey section */}
       <Journey />
-      {/* Preivew section */}
-      <Preview />
       {/* How it works section */}
       <HowitWorks />
       {/* Statistics section */}
